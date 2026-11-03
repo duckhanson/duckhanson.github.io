@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in Latex
+% Template: Jake Gutierrez's resume (https://github.com/jakegut/resume), MIT License
+% Based off of: https://github.com/sb2nov/resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Chia-Han Lu} \\ \vspace{1pt}
+    \small \href{mailto:d13922003@csie.ntu.edu.tw}{\underline{d13922003@csie.ntu.edu.tw}} $|$
+    \href{https://duckhanson.github.io}{\underline{duckhanson.github.io}} $|$
+    \href{https://github.com/duckhanson}{\underline{github.com/duckhanson}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Taiwan University}{Expected May 2028}
+      {Ph.D. in Computer Science and Information Engineering}{Taipei}
+    \resumeSubheading
+      {National Tsing Hua University}{Sep. 2022 -- May 2024}
+      {M.S. in Computer Science}{Hsinchu}
+    \resumeSubheading
+      {National Tsing Hua University}{Sep. 2018 -- Jun. 2022}
+      {B.S. in Electrical Engineering and Computer Science}{Hsinchu}
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH AREA-----------
+\section{Research Area}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Deep Learning}{: Neural tangent kernel and wide neural network.} \\
+     \textbf{Large Language Models}{: Efficient inference system and key-value cache management.} \\
+     \textbf{Memory and Storage Systems}{: Non-volatile memory systems and NAND flash memories.}
+    }}
+ \end{itemize}
+
+%-----------RESEARCH PROJECTS-----------
+\section{Research Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{HIPER: Logarithmic Prefix Matching for KV Cache Offloading on ZNS SSDs} $|$ \emph{ICCAD'26}}{}
+          \resumeItemListStart
+            \resumeItem{A system designed to eliminate the performance bottleneck when large language models (LLMs) retrieve saved conversation data (KV cache) from zoned namespace (ZNS) SSDs. We achieve algorithmic improvement from $O(N)$ to $O(\ln N)$ for retrieving KV cache. This work is supervised by Prof. Tei-Wei Kuo and Prof. Yuan-Hao Chang from National Taiwan University.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{PAIK: Posture-Aware Inverse Kinematics} $|$ \emph{College Research Project'21, MOST, Taiwan}}{}
+          \resumeItemListStart
+            \resumeItem{A competition for college research was held by the Ministry of Science and Technology (MOST), Taiwan. The awarded research project was the Imitation of Two different Robotic Arms. This work is supervised by Prof. Chung-Ta King from National Tsing Hua University.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Macronix International Co., Ltd.}{Aug. 2024 -- Present}
+      {Senior Engineer}{Hsinchu}
+      \resumeItemListStart
+        \resumeItem{Publish patents, proof of concepts, and papers. Research on the flash storage system with optimization on the approximate nearest neighbor search, large language model inference systems, and key-value cache management.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES-----------
+\section{Activities}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Top Talent Project from Macronix International Co., Ltd.}{Oct. 2022}
+      {Intern}{Hsinchu, Taiwan}
+    \resumeSubheading
+      {Exchange to University of Minnesota}{Jan. 2022 -- Jun. 2022}
+      {Exchange Student}{Minnesota, U.S.A}
+    \resumeSubheading
+      {Exchange to Tsing Hua University}{Jun. 2019 -- Jul. 2019}
+      {Exchange Student}{Beijing, China}
+  \resumeSubHeadingListEnd
+
+%-----------LANGUAGES AND SKILLS-----------
+\section{Languages and Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Chinese}{: Native.} \\
+     \textbf{English}{: Fluent.} \\
+     \textbf{Programming}{: C, C++, and Python.} \\
+     \textbf{Domains}{: Embedded systems, memory/storage firmware basics, on-device AI/ML.}
+    }}
+ \end{itemize}
+
+\end{document}
